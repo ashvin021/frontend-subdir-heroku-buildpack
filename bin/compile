@@ -21,7 +21,7 @@ if [ -f $ENV_DIR/FRONTEND_PATH ]; then
             echo "       moving working dir: $FRONTEND_PATH to $TMP_DIR"
             cp -R $BUILD_DIR/$FRONTEND_PATH/. $TMP_DIR/
             echo "       moving compiled bin: $BACKEND_BIN to $TMP_DIR"
-            cp $BUILD_DIR/$BACKEND_BIN/ $TMP_DIR/
+            cp $BUILD_DIR/$BACKEND_BIN $TMP_DIR/
             echo "       cleaning build dir $BUILD_DIR"
             rm -rf $BUILD_DIR/*
             echo "       copying preserved work dir from cache $TMP_DIR to build dir $BUILD_DIR"
